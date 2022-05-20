@@ -16,7 +16,6 @@ const Peer = window.Peer;
     SDK: ${sdkSrc ? sdkSrc.src : 'unknown'}
   `.trim();
 
-  
   const peer = (window.peer = new Peer({
     key: window.__SKYWAY_KEY__,
     //key: '39f05a53-160c-4ffd-a468-11cdc3be64ef',
@@ -60,7 +59,6 @@ const Peer = window.Peer;
       messages.textContent += `You: ${data}\n`;
       localText.value = '';
     }
-
   });
 
   peer.once('open', id => (localId.textContent = id));
