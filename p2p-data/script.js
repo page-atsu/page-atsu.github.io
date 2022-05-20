@@ -1,5 +1,14 @@
 const Peer = window.Peer;
+var start = new Date();
 
+setInterval(goTimer, 10);
+});
+
+// タイマーの処理
+var goTimer = function() {
+    var now = new Date();
+    document.getElementById('timer').innerHTML = now.getTime();
+}
 (async function main() {
   const localId = document.getElementById('js-local-id');
   const localText = document.getElementById('js-local-text');
