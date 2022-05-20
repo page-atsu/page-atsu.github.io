@@ -51,9 +51,11 @@ const Peer = window.Peer;
     closeTrigger.addEventListener('click', () => dataConnection.close(true), {
       once: true,
     });
-
+    let value1 = 10;
     function onClickSend() {
-      const data = localText.value;
+      //const data = localText.value;
+      value1 += 1;
+      const data = value1;
       dataConnection.send(data);
 
       messages.textContent += `You: ${data}\n`;
@@ -85,11 +87,11 @@ const Peer = window.Peer;
     closeTrigger.addEventListener('click', () => dataConnection.close(true), {
       once: true,
     });
-    let value = 1;
+    let value2 = 1;
     function onClickSend() {
       //const data = localText.value;
-      value += 1;
-      const data = value;
+      value2 += 1;
+      const data = value2;
       dataConnection.send(data);
 
       messages.textContent += `You: ${data}\n`;
