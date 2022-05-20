@@ -85,9 +85,11 @@ const Peer = window.Peer;
     closeTrigger.addEventListener('click', () => dataConnection.close(true), {
       once: true,
     });
-
+    let value = 1;
     function onClickSend() {
-      const data = localText.value;
+      //const data = localText.value;
+      value += 1;
+      const data = value;
       dataConnection.send(data);
 
       messages.textContent += `You: ${data}\n`;
