@@ -60,15 +60,7 @@ const Peer = window.Peer;
       messages.textContent += `You: ${data}\n`;
       localText.value = '';
     }
-    var start = new Date();
-    setInterval(goTimer, 10);
-    });
 
-    // タイマーの処理
-    var goTimer = function() {
-      var now = new Date();
-      document.getElementById('timer').innerHTML = now.getTime();
-    }
   });
 
   peer.once('open', id => (localId.textContent = id));
