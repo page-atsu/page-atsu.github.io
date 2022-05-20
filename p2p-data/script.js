@@ -1,14 +1,5 @@
 const Peer = window.Peer;
-var start = new Date();
 
-setInterval(goTimer, 10);
-});
-
-// タイマーの処理
-var goTimer = function() {
-    var now = new Date();
-    document.getElementById('timer').innerHTML = now.getTime();
-}
 (async function main() {
   const localId = document.getElementById('js-local-id');
   const localText = document.getElementById('js-local-text');
@@ -25,6 +16,16 @@ var goTimer = function() {
     SDK: ${sdkSrc ? sdkSrc.src : 'unknown'}
   `.trim();
 
+  var start = new Date();
+  setInterval(goTimer, 10);
+  });
+
+  // タイマーの処理
+  var goTimer = function() {
+    var now = new Date();
+    document.getElementById('timer').innerHTML = now.getTime();
+  }
+  
   const peer = (window.peer = new Peer({
     key: window.__SKYWAY_KEY__,
     //key: '39f05a53-160c-4ffd-a468-11cdc3be64ef',
