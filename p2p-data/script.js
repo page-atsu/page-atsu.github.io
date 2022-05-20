@@ -75,6 +75,7 @@ const Peer = window.Peer;
       messages.textContent += `Remote: ${data}\n`;
     });
 
+    
     dataConnection.once('close', () => {
       messages.textContent += `=== DataConnection has been closed ===\n`;
       sendTrigger.removeEventListener('click', onClickSend);
